@@ -1,185 +1,182 @@
-# CoreUI Free React Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=CoreUI%20-%20Free%React%204%20Admin%20Template%20&url=https://coreui.io&hashtags=bootstrap,admin,template,dashboard,panel,free,angular,react,vue)
+# Chorvoq GIS – Land Territory Management App
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![@coreui coreui](https://img.shields.io/badge/@coreui%20-coreui-lightgrey.svg?style=flat-square)](https://github.com/coreui/coreui)
-[![npm package][npm-coreui-badge]][npm-coreui]
-[![NPM downloads][npm-coreui-download]][npm-coreui]
-[![@coreui react](https://img.shields.io/badge/@coreui%20-react-lightgrey.svg?style=flat-square)](https://github.com/coreui/react)
-[![npm package][npm-coreui-react-badge]][npm-coreui-react]
-[![NPM downloads][npm-coreui-react-download]][npm-coreui-react]  
+Chorvoq GIS is a full-stack web-based GIS (Geographic Information System) tool for managing land territories. It enables users to draw, label, and organize territorial boundaries on an interactive map. Ideal for government and businesses needing to track and manage land usage effectively.
 
-[npm-coreui]: https://www.npmjs.com/package/@coreui/coreui
-[npm-coreui-badge]: https://img.shields.io/npm/v/@coreui/coreui.png?style=flat-square
-[npm-coreui-download]: https://img.shields.io/npm/dm/@coreui/coreui.svg?style=flat-square
-[npm-coreui-react]: https://www.npmjs.com/package/@coreui/react
-[npm-coreui-react-badge]: https://img.shields.io/npm/v/@coreui/react.png?style=flat-square
-[npm-coreui-react-download]: https://img.shields.io/npm/dm/@coreui/react.svg?style=flat-square
-[npm]: https://www.npmjs.com/package/@coreui/react
+---
 
-[![Bootstrap Admin Template](https://assets.coreui.io/products/coreui-free-bootstrap-admin-template-light-dark.webp)](https://coreui.io/product/free-react-admin-template/)
+## 🌍 Features
 
-CoreUI is meant to be the UX game changer. Pure & transparent code is devoid of redundant components, so the app is light enough to offer ultimate user experience. This means mobile devices also, where the navigation is just as easy and intuitive as on a desktop or laptop. The CoreUI Layout API lets you customize your project for almost any device – be it Mobile, Web or WebApp – CoreUI covers them all!
+- 📍 **Add & Save Territories** – Draw custom polygon shapes on the map and label them.
+- 🗂️ **Layer Management** – Organize shapes under map layers. Each map view is a separate "layer".
+- 🔎 **Searchable Layers** – Quickly locate and manage map elements.
+- ✅ **Status Tracking** – Monitor creation status of each layer.
+- 🗺️ **GeoServer Map Integration** – Visualize maps using GeoServer and satellite imagery.
+- 🧩 **Full Stack** – React frontend, Spring Boot backend, PostgreSQL database.
 
-## Table of Contents
+---
 
-* [Versions](#versions)
-* [CoreUI PRO](#coreui-pro)
-* [CoreUI PRO React Admin Templates](#coreui-pro-react-admin-templates)
-* [Quick Start](#quick-start)
-* [Installation](#installation)
-* [Basic usage](#basic-usage)
-* [What's included](#whats-included)
-* [Documentation](#documentation)
-* [Versioning](#versioning)
-* [Creators](#creators)
-* [Community](#community)
-* [Support CoreUI Development](#support-coreui-development)
-* [Copyright and License](#copyright-and-license)
+## 📸 Interface Preview
 
-## Versions
+![Map Interaction](./public/map.png)  
+*Map with Drawing and Shape Management*
 
-* [CoreUI Free Bootstrap Admin Template](https://github.com/coreui/coreui-free-bootstrap-admin-template)
-* [CoreUI Free Angular Admin Template](https://github.com/coreui/coreui-free-angular-admin-template)
-* [CoreUI Free React.js Admin Template (Vite)](https://github.com/coreui/coreui-free-react-admin-template)
-* [CoreUI Free React.js Admin Template (Create React App)](https://github.com/coreui/coreui-free-react-admin-template-cra)
-* [CoreUI Free Vue.js Admin Template](https://github.com/coreui/coreui-free-vue-admin-template)
+![Layer Management](./public/layers.png)
+*Layer Management Panel*
 
-## CoreUI PRO
+---
 
-* 💪  [CoreUI PRO Angular Admin Template](https://coreui.io/product/angular-dashboard-template/)
-* 💪  [CoreUI PRO Bootstrap Admin Template](https://coreui.io/product/bootstrap-dashboard-template/)
-* 💪  [CoreUI PRO Next.js Admin Template](https://coreui.io/product/next-js-dashboard-template/)
-* 💪  [CoreUI PRO React Admin Template](https://coreui.io/product/react-dashboard-template/)
-* 💪  [CoreUI PRO Vue Admin Template](https://coreui.io/product/vue-dashboard-template/)
+## ⚙️ How It Works
 
-## CoreUI PRO React Admin Templates
+1. **Upload Layer** – Add a new map layer (WMS) to the system.
+2. **Draw Shape** – Mark territories on the map using polygon drawing tools.
+3. **Add Metadata** – Fill in details like `objectid`, `fid_shape`, `created_by`, and more.
+4. **Save & Display** – Shapes are saved in the database and visualized on the map.
 
-| Default Theme | Light Theme |
-| --- | --- |
-| [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_default_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=default) | [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_light_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=light)|
+Each **layer** contains multiple **shapes**, each linked to metadata and managed through the app.
 
-| Modern Theme | Bright Theme |
-| --- | --- |
-| [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_default_v3_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=modern) | [![CoreUI PRO React Admin Template](https://coreui.io/images/templates/coreui_pro_light_v3_light_dark.webp)](https://coreui.io/product/react-dashboard-template/?theme=bright)|
+---
 
-## Quick Start
+## 🛠️ Tech Stack
 
-- [Download the latest release](https://github.com/coreui/coreui-free-react-admin-template/archive/refs/heads/main.zip)
-- Clone the repo: `git clone https://github.com/coreui/coreui-free-react-admin-template.git`
+- **Frontend**: React
+- **Backend**: Spring Boot – [Backend Repository](https://github.com/MuhammadayubErkinoff/FinalProject.git)
+- **Map Source**: GeoServer (WMS Layers)
+- **Database**: PostgreSQL
+- **Containerization**: Docker + Docker Compose
 
-### Installation
+---
 
-``` bash
-$ npm install
-```
+## 🚀 Getting Started
 
-or
-
-``` bash
-$ yarn install
-```
-
-### Basic usage
-
-``` bash
-# dev server with hot reload at http://localhost:3000
-$ npm start 
-```
-
-or 
-
-``` bash
-# dev server with hot reload at http://localhost:3000
-$ yarn start
-```
-
-Navigate to [http://localhost:3000](http://localhost:3000). The app will automatically reload if you change any of the source files.
-
-#### Build
-
-Run `build` to build the project. The build artifacts will be stored in the `build/` directory.
+### 📦 Backend Setup
 
 ```bash
-# build for production with minification
-$ npm run build
+git clone https://github.com/MuhammadayubErkinoff/FinalProject.git
+cd FinalProject
+./mvnw package -DskipTests
+docker compose build
+docker compose up -d
 ```
 
-or
+This will build the Spring Boot backend, start PostgreSQL, and run all services.
+
+### 💻 Frontend Setup
 
 ```bash
-# build for production with minification
-$ yarn build
+git clone https://github.com/Abdulhafiz0512/web2.git
+cd web2
+npm install
+npm run dev
 ```
 
-## What's included
+The frontend will be available at `http://localhost:3000`.
 
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+---
+
+## 📂 Project Structure (Frontend)
 
 ```
-coreui-free-react-admin-template
-├── public/          # static files
-│   ├── favicon.ico
-│   └── manifest.json
-│
-├── src/             # project root
-│   ├── assets/      # images, icons, etc.
-│   ├── components/  # common components - header, footer, sidebar, etc.
-│   ├── layouts/     # layout containers
-│   ├── scss/        # scss styles
-│   ├── views/       # application views
-│   ├── _nav.js      # sidebar navigation config
+web2/
+├── css/
+├── eslint.config.mjs
+├── index.html
+├── LICENSE
+├── node_modules/
+├── package.json
+├── package-lock.json
+├── public/
+├── README.md
+├── src/
 │   ├── App.js
 │   ├── index.js
-│   ├── routes.js    # routes config
-│   └── store.js     # template state example 
-│
-├── index.html       # html template
-├── ...
-├── package.json
-├── ...
-└── vite.config.mjs  # vite config
+│   ├── _nav.js
+│   ├── routes.js
+│   ├── app/
+│   │   └── store.js
+│   ├── assets/
+│   │   ├── brand/
+│   │   └── images/
+│   ├── components/
+│   │   ├── AppBreadcrumb.js
+│   │   ├── AppContent.js
+│   │   ├── AppFooter.js
+│   │   ├── AppHeader.js
+│   │   ├── AppSidebar.js
+│   │   ├── AppSidebarNav.js
+│   │   ├── DocsComponents.js
+│   │   ├── DocsExample.js
+│   │   ├── DocsIcons.js
+│   │   ├── DocsLink.js
+│   │   ├── header/
+│   │   └── index.js
+│   ├── features/
+│   │   ├── access/
+│   │   └── auth/
+│   ├── layout/
+│   │   └── DefaultLayout.js
+│   ├── scss/
+│   │   ├── _custom.scss
+│   │   ├── _theme.scss
+│   │   ├── _variables.scss
+│   │   ├── examples.scss
+│   │   ├── style.scss
+│   │   └── vendors/
+│   ├── utils/
+│   │   ├── api/
+│   │   └── navigation/
+│   └── views/
+│       ├── about/
+│       ├── base/
+│       ├── buttons/
+│       ├── charts/
+│       ├── contact/
+│       ├── dashboard/
+│       ├── departments/
+│       ├── forms/
+│       ├── layers/
+│       ├── map/
+│       ├── notifications/
+│       ├── pages/
+│       ├── profile/
+│       ├── roles/
+│       ├── theme/
+│       ├── users/
+│       └── widgets/
+└── vite.config.mjs
 ```
 
-## Documentation
+---
 
-The documentation for the CoreUI Admin Template is hosted at our website [CoreUI for React](https://coreui.io/react/docs/templates/installation/)
+## ✅ Future Improvements
 
-## Versioning
+- 📤 Export shapes as GeoJSON or PDF
+- 🌐 Multilingual interface
+- 📲 GPS location tracking & mobile support
 
-For transparency into our release cycle and in striving to maintain backward compatibility, CoreUI Free Admin Template is maintained under [the Semantic Versioning guidelines](http://semver.org/).
+---
 
-See [the Releases section of our project](https://github.com/coreui/coreui-free-react-admin-template/releases) for changelogs for each release version.
+## 🧑‍💼 Use Cases
 
-## Creators
+- Government land allocation systems
+- Business & agricultural land management
+- Environmental monitoring zones
+- Utility infrastructure mapping
 
-**Łukasz Holeczek**
+---
 
-* <https://twitter.com/lukaszholeczek>
-* <https://github.com/mrholek>
+## 🤝 Contributing
 
-**Andrzej Kopański**
+We welcome contributions! Fork the repo, make your changes, and submit a pull request.
 
-* <https://github.com/xidedix>
+---
 
-**CoreUI Team**
+## 📬 Contact
 
-* <https://twitter.com/core_ui>
-* <https://github.com/coreui>
-* <https://github.com/orgs/coreui/people>
+Developed by **Muhammadayub Erkinov**  
+For inquiries or support, feel free to reach out!
 
-## Community
+---
 
-Get updates on CoreUI's development and chat with the project maintainers and community members.
+## 📄 License
 
-- Follow [@core_ui on Twitter](https://twitter.com/core_ui).
-- Read and subscribe to [CoreUI Blog](https://coreui.ui/blog/).
-
-## Support CoreUI Development
-
-CoreUI is an MIT-licensed open source project and is completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. You can support development by buying the [CoreUI PRO](https://coreui.io/pricing/?framework=react&src=github-coreui-free-react-admin-template) or by becoming a sponsor via [Open Collective](https://opencollective.com/coreui/).
-
-## Copyright and License
-
-copyright 2025 creativeLabs Łukasz Holeczek.   
-
-Code released under [the MIT license](https://github.com/coreui/coreui-free-react-admin-template/blob/main/LICENSE).
+This project is open source and available under the [MIT License](LICENSE).
